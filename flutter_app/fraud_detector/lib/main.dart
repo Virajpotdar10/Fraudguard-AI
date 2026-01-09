@@ -22,16 +22,20 @@ class FraudDetectorApp extends StatelessWidget {
   }
 
   ThemeData _buildTheme(Brightness brightness) {
-    var colorScheme = ColorScheme.fromSeed(
+    final colorScheme = ColorScheme.fromSeed(
       seedColor: const Color(0xFF4F46E5),
       brightness: brightness,
-      background: brightness == Brightness.light ? const Color(0xFFF9FAFB) : const Color(0xFF111827),
-      surface: brightness == Brightness.light ? Colors.white : const Color(0xFF1F2937),
+      background: brightness == Brightness.light
+          ? const Color(0xFFF9FAFB)
+          : const Color(0xFF111827),
+      surface: brightness == Brightness.light
+          ? Colors.white
+          : const Color(0xFF1F2937),
       error: const Color(0xFFEF4444),
       primary: const Color(0xFF4F46E5),
     );
 
-    var textTheme = GoogleFonts.interTextTheme(
+    final textTheme = GoogleFonts.interTextTheme(
       ThemeData(brightness: brightness).textTheme,
     ).apply(
       bodyColor: colorScheme.onSurface,
@@ -60,17 +64,20 @@ class FraudDetectorApp extends StatelessWidget {
             const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(color: colorScheme.onSurface.withOpacity(0.2)),
+          borderSide:
+              BorderSide(color: colorScheme.onSurface.withOpacity(0.2)),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(color: colorScheme.onSurface.withOpacity(0.2)),
+          borderSide:
+              BorderSide(color: colorScheme.onSurface.withOpacity(0.2)),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(color: colorScheme.primary, width: 2),
         ),
-        labelStyle: textTheme.bodyMedium?.copyWith(color: colorScheme.onSurface.withOpacity(0.7)),
+        labelStyle: textTheme.bodyMedium
+            ?.copyWith(color: colorScheme.onSurface.withOpacity(0.7)),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -98,13 +105,12 @@ class FraudDetectorApp extends StatelessWidget {
         elevation: 1,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
-          side: BorderSide(color: colorScheme.onSurface.withOpacity(0.1), width: 1),
+          side: BorderSide(
+              color: colorScheme.onSurface.withOpacity(0.1), width: 1),
         ),
-        margin: const EdgeInsets.all(0),
+        margin: const EdgeInsets.all(8),
         color: colorScheme.surface,
       ),
     );
   }
 }
-
-

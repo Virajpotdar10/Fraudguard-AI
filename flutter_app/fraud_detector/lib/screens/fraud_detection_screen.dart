@@ -413,7 +413,7 @@ class _FraudDetectionScreenState extends State<FraudDetectionScreen> {
   Widget _buildSummarySection() {
     final stats = _summaryStats;
     return Card(
-      color: Theme.of(context).colorScheme.surfaceContainerHighest,
+      color: Theme.of(context).colorScheme.surfaceVariant,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -862,8 +862,8 @@ class _FraudDetectionScreenState extends State<FraudDetectionScreen> {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: DataTable(
-              headingRowColor: WidgetStateProperty.resolveWith(
-                (states) => Theme.of(context).colorScheme.surfaceContainerHighest,
+              headingRowColor: MaterialStateProperty.resolveWith(
+                (states) => Theme.of(context).colorScheme.surfaceVariant,
               ),
               columns: const [
                 DataColumn(label: Text('Row #')),
@@ -882,8 +882,8 @@ class _FraudDetectionScreenState extends State<FraudDetectionScreen> {
                     : const Color(0xFFD1FAE5).withOpacity(0.5);
 
                 return DataRow(
-                  color: WidgetStateProperty.resolveWith((states) {
-                    if (states.contains(WidgetState.selected)) {
+                  color: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.selected)) {
                       return backgroundColor;
                     }
                     return backgroundColor;

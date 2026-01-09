@@ -23,7 +23,7 @@ services:
         value: 10001
     plan: free
 
-  - type: web
+  - type: static
     name: fraudguard-frontend
     env: python
     buildCommand: |
