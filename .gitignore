@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+# Python lib directories (but not Flutter lib/)
+/lib/
+/lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Flutter
+flutter_app/fraud_detector/.dart_tool/
+flutter_app/fraud_detector/.flutter-plugins
+flutter_app/fraud_detector/.flutter-plugins-dependencies
+flutter_app/fraud_detector/.packages
+flutter_app/fraud_detector/.pub-cache/
+flutter_app/fraud_detector/.pub/
+flutter_app/fraud_detector/build/
+flutter_app/fraud_detector/.ios/
+flutter_app/fraud_detector/.android/
+
+# ML Model (include the model file - it's needed for the project)
+# Uncomment if you don't want to commit the model
+# ml/model.pkl
+
+# Logs
+*.log
+logs/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+test_backend.py
+
